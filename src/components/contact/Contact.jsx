@@ -3,6 +3,7 @@ import "./contact.scss";
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage(true);
@@ -14,8 +15,8 @@ export default function Contact() {
       </div>
       <div className="right">
         <h2>Contact.</h2>
-        <form onClick={handleSubmit}>
-          <input type="text" placeholder="Email"></input>
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Email" />
           <textarea placeholder="Message"></textarea>
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll reply ^^</span>}
