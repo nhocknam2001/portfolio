@@ -7,17 +7,32 @@ import {
   mobilePortfolio,
   designPortfolio,
   contentPortfolio,
-} from "../../data.js";
+} from "../../data";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
   const list = [
-    { id: "featured", title: "Featured" },
-    { id: "web", title: "Web App" },
-    { id: "mobile", title: "Mobile App" },
-    { id: "design", title: "Design" },
-    { id: "content", title: "Content" },
+    {
+      id: "featured",
+      title: "Featured",
+    },
+    {
+      id: "web",
+      title: "Web App",
+    },
+    {
+      id: "mobile",
+      title: "Mobile App",
+    },
+    {
+      id: "design",
+      title: "Design",
+    },
+    {
+      id: "content",
+      title: "Content",
+    },
   ];
 
   useEffect(() => {
@@ -44,7 +59,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>My Portfolio.</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -58,7 +73,7 @@ export default function Portfolio() {
       <div className="container">
         {data.map((d) => (
           <div className="item">
-            <img src={d.img} alt=""></img>
+            <img src={d.img} alt="" />
             <h3>{d.title}</h3>
           </div>
         ))}
