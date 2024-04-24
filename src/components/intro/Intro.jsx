@@ -7,10 +7,9 @@ export default function Intro() {
   const textRef = useRef();
   useEffect(() => {
     init(textRef.current, {
-      showCursor: false,
+      showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      showCursor: true,
       strings: ["Internship", "Front-end Developer"],
     });
   }, []);
@@ -18,7 +17,7 @@ export default function Intro() {
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src="assets/me.jpg"></img>
+          <img src="assets/me.jpg" alt=""></img>
         </div>
       </div>
       <div className="right">
@@ -30,7 +29,7 @@ export default function Intro() {
           </h3>
         </div>
         <a href="#portfolio">
-          <img src="assets/down.png" />
+          <img src="assets/down.png" alt="" />
         </a>
       </div>
     </div>

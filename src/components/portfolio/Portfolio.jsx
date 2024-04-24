@@ -10,13 +10,9 @@ import {
 } from "../../data";
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState("web");
   const [data, setData] = useState([]);
   const list = [
-    {
-      id: "featured",
-      title: "Featured",
-    },
     {
       id: "web",
       title: "Web App",
@@ -37,9 +33,6 @@ export default function Portfolio() {
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
-        setData(featuredPortfolio);
-        break;
       case "web":
         setData(webPortfolio);
         break;
@@ -74,7 +67,9 @@ export default function Portfolio() {
         {data.map((d) => (
           <div className="item">
             <img src={d.img} alt="" />
-            <h3>{d.title}</h3>
+            <h3>
+              <a href={d.link}>{d.title}</a>
+            </h3>
           </div>
         ))}
       </div>
