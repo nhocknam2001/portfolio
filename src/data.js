@@ -41,7 +41,7 @@ export const webPortfolio = [
   {
     id: 1,
     title: "Admin Dashboard",
-    link: "https://github.com/nhocknam2001/admin-dashboard",
+    link: "https://github.com/nhocknam2001/ReactAdminDashboard",
     img: "assets/dashboard.png",
   },
   {
